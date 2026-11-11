@@ -12,7 +12,7 @@ const wss = new WebSocket.Server({ server });
 
 app.use(express.static("public"));    // Serve everything inside the public folder
 
-const GAME_PASSWORD = "secret123";    // Password required to join the game
+const GAME_PASSWORD = "password";    // Password required to join the game
 
 // GAME STATE
 function newGameState() {
