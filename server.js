@@ -2,9 +2,9 @@
 // CS 310 - Project 4, Problem 1 - Multiplayer Tic-Tac-Toe server
 
 // SERVER SETUP
-const express = require("express");   // Express framework
-const http = require("http");         // HTTP module shared by Express and WebSockets
-const WebSocket = require("ws");      // WebSocket library
+const express = require("express");   
+const http = require("http");         
+const WebSocket = require("ws");      
 
 const app = express();
 const server = http.createServer(app);
@@ -174,6 +174,6 @@ wss.on("connection", ws => {
 });
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
